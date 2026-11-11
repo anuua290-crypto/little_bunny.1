@@ -1,0 +1,405 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>littlebunny ♡</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Pacifico&family=Cormorant+Garamond:ital,wght@1,500&display=swap" rel="stylesheet">
+
+<style>
+/* ===== ROOT ===== */
+
+:root {
+    --pink: #f4a6bd;
+    --dark-pink: #c96f91;
+    --light-pink: #fff0f4;
+    --cream: #fffaf5;
+    --text: #895c70;
+    --white: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    min-height: 100svh;
+    font-family: 'Quicksand', sans-serif;
+    color: var(--text);
+
+    background:
+        radial-gradient(circle at 10% 20%, #ffe0eb 0, transparent 30%),
+        radial-gradient(circle at 90% 80%, #fbd9e5 0, transparent 30%),
+        #fff8f5;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 25px;
+    overflow-x: hidden;
+}
+
+/* ===== FLOATING DECORATIONS ===== */
+
+.float {
+    position: fixed;
+    pointer-events: none;
+    opacity: 0.6;
+    animation: float 5s ease-in-out infinite;
+    z-index: 0;
+}
+
+.f1 { top: 10%; left: 9%; font-size: 28px; }
+.f2 { top: 20%; right: 12%; font-size: 23px; animation-delay: 1s; }
+.f3 { bottom: 15%; left: 14%; font-size: 24px; animation-delay: 2s; }
+.f4 { bottom: 12%; right: 10%; font-size: 30px; animation-delay: 1.5s; }
+
+@keyframes float {
+    0%, 100% { transform: translateY(0) rotate(-5deg); }
+    50% { transform: translateY(-15px) rotate(8deg); }
+}
+
+/* ===== MAIN CARD ===== */
+
+.container {
+    position: relative;
+    z-index: 1;
+
+    width: 100%;
+    max-width: 620px;
+
+    padding: 50px 35px;
+
+    background: rgba(255,255,255,0.75);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+
+    border: 1px solid white;
+    border-radius: 35px;
+
+    text-align: center;
+
+    box-shadow:
+        0 20px 60px rgba(201,111,145,0.12),
+        inset 0 0 20px rgba(255,255,255,0.7);
+
+    animation: entrance 1s ease;
+}
+
+@keyframes entrance {
+    from {
+        opacity: 0;
+        transform: translateY(30px) scale(.96);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* ===== TOP LABEL ===== */
+
+.top-label {
+    display: inline-block;
+    padding: 8px 20px;
+
+    background: #fff0f4;
+    border: 1px solid #f9d6e2;
+    border-radius: 30px;
+
+    color: #ca829c;
+    font-size: 11px;
+    letter-spacing: 3px;
+
+    margin-bottom: 22px;
+}
+
+/* ===== TITLE ===== */
+
+h1 {
+    font-family: 'Pacifico', cursive;
+    font-size: clamp(34px, 7vw, 49px);
+    font-weight: 400;
+    color: #c96f91;
+
+    text-shadow: 2px 3px 0 #ffe3eb;
+}
+
+h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: clamp(20px, 4vw, 27px);
+
+    color: #df9aaf;
+    margin: 10px 0 20px;
+}
+
+.love {
+    margin-top: 15px;
+    font-size: clamp(30px, 6vw, 40px);
+}
+
+/* ===== BUNNY DECORATION ===== */
+
+.bunny {
+    font-size: 65px;
+    display: block;
+    margin: 15px auto;
+
+    filter: drop-shadow(0 6px 8px #f5d1df);
+
+    animation: bunny-hop 3s ease-in-out infinite;
+}
+
+@keyframes bunny-hop {
+    0%, 90%, 100% { transform: translateY(0); }
+    95% { transform: translateY(-12px); }
+}
+
+/* ===== DIVIDER ===== */
+
+.divider {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    color: #e8a6bb;
+    margin: 22px 0;
+}
+
+.divider::before,
+.divider::after {
+    content: "";
+    height: 1px;
+    flex: 1;
+    background: #f4d4df;
+}
+
+/* ===== PRE MESSAGE ===== */
+
+pre {
+    font-family: 'Quicksand', sans-serif;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+
+    background: #fff6f8;
+    border: 1px dashed #edc2d1;
+    border-radius: 22px;
+
+    padding: 25px;
+    margin: 20px 0;
+
+    line-height: 2;
+    font-size: 15px;
+    color: #a7788d;
+}
+
+/* ===== LINK ===== */
+
+a {
+    display: inline-block;
+    text-decoration: none;
+
+    color: white;
+    background: linear-gradient(135deg, #f4a6bd, #db85a2);
+
+    padding: 13px 35px;
+    border-radius: 40px;
+
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1px;
+
+    box-shadow: 0 7px 18px #edc6d5;
+
+    transition: .35s;
+}
+
+a:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px #eab3c8;
+}
+
+/* ===== BUTTON ===== */
+
+button {
+    display: block;
+    margin: 18px auto 0;
+
+    padding: 14px 30px;
+
+    border: 1px solid #f2c4d4;
+    border-radius: 40px;
+
+    background: #fff3f7;
+    color: #c27694;
+
+    font-family: 'Quicksand', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+
+    cursor: pointer;
+    transition: .3s;
+}
+
+button:hover {
+    background: #f9dce7;
+    transform: scale(1.06);
+}
+
+/* ===== FOOTER ===== */
+
+footer {
+    margin-top: 30px;
+
+    color: #d0a0b2;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 17px;
+}
+
+/* ===== FALLING HEARTS ===== */
+
+.heart {
+    position: fixed;
+    top: -30px;
+    pointer-events: none;
+    color: #eaa4bb;
+    animation: falling linear forwards;
+    z-index: 5;
+}
+
+@keyframes falling {
+    to {
+        transform: translateY(110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* ===== RESPONSIVE ===== */
+
+@media (max-width: 600px) {
+    body {
+        padding: 15px;
+    }
+
+    .container {
+        padding: 35px 22px;
+        border-radius: 27px;
+    }
+
+    .float {
+        opacity: .35;
+    }
+
+    .bunny {
+        font-size: 52px;
+    }
+
+    pre {
+        padding: 18px;
+    }
+}
+
+@media (max-width: 360px) {
+    .container {
+        padding: 25px 15px;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    a, button {
+        max-width: 100%;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation: none !important;
+        transition: none !important;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- Floating decorations -->
+<div class="float f1">♡</div>
+<div class="float f2">୨୧</div>
+<div class="float f3">✿</div>
+<div class="float f4">♡</div>
+
+<main class="container">
+
+    <div class="top-label">
+        WELCOME TO MY LITTLE WORLD
+    </div>
+
+    <span class="bunny">🐰</span>
+
+    <h1>hello world!!!</h1>
+
+    <h2>a little place full of love ♡</h2>
+
+    <div class="divider">୨୧</div>
+
+    <h1 class="love">loveyaaaa!!!</h1>
+
+    <pre>littlebunny haaay
+haaay ♡</pre>
+
+    <a href="https://chatgpt.com/" target="_blank">
+        ASK ME ♡
+    </a>
+
+    <button onclick="showLove()">
+        dararai bunny ♡
+    </button>
+
+    <footer>
+        made with love, just for you ✿
+    </footer>
+
+</main>
+
+<script>
+function showLove() {
+    alert("hiiii little bunny!! ♡ ૮꒰ ˶• ༝ •˶꒱ა");
+}
+
+// Falling hearts
+function createHeart() {
+    const heart = document.createElement("div");
+
+    heart.className = "heart";
+    heart.innerHTML = ["♡", "♥", "୨୧", "✿"][
+        Math.floor(Math.random() * 4)
+    ];
+
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.fontSize = (12 + Math.random() * 15) + "px";
+    heart.style.animationDuration = (5 + Math.random() * 5) + "s";
+
+    document.body.appendChild(heart);
+
+    setTimeout(() => heart.remove(), 10000);
+}
+
+if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    setInterval(createHeart, 900);
+}
+</script>
+
+</body>
+</html>
